@@ -1,0 +1,3 @@
+DEFAULT_PORT = 4000
+
+DEFAULT_BUFFERSIZE = 12  # size of header

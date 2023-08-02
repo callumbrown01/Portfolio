@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="mean concave points <= 0.049\ngini = 0.463\nsamples = 483\nvalue = [176, 307]\nclass = benign", fillcolor="#abd5f4"] ;
+1 [label="mean radius <= 14.98\ngini = 0.085\nsamples = 294\nvalue = [13, 281]\nclass = benign", fillcolor="#42a2e6"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="worst texture <= 33.35\ngini = 0.035\nsamples = 278\nvalue = [5, 273]\nclass = benign", fillcolor="#3d9fe5"] ;
+1 -> 2 ;
+3 [label="gini = 0.008\nsamples = 258\nvalue = [1, 257]\nclass = benign", fillcolor="#3a9de5"] ;
+2 -> 3 ;
+4 [label="gini = 0.32\nsamples = 20\nvalue = [4, 16]\nclass = benign", fillcolor="#6ab6ec"] ;
+2 -> 4 ;
+5 [label="mean texture <= 18.68\ngini = 0.5\nsamples = 16\nvalue = [8, 8]\nclass = malignant", fillcolor="#ffffff"] ;
+1 -> 5 ;
+6 [label="gini = 0.0\nsamples = 6\nvalue = [0, 6]\nclass = benign", fillcolor="#399de5"] ;
+5 -> 6 ;
+7 [label="gini = 0.32\nsamples = 10\nvalue = [8, 2]\nclass = malignant", fillcolor="#eca06a"] ;
+5 -> 7 ;
+8 [label="worst concavity <= 0.225\ngini = 0.237\nsamples = 189\nvalue = [163, 26]\nclass = malignant", fillcolor="#e99559"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="mean fractal dimension <= 0.055\ngini = 0.219\nsamples = 16\nvalue = [2, 14]\nclass = benign", fillcolor="#55abe9"] ;
+8 -> 9 ;
+10 [label="gini = 0.0\nsamples = 2\nvalue = [2, 0]\nclass = malignant", fillcolor="#e58139"] ;
+9 -> 10 ;
+11 [label="gini = 0.0\nsamples = 14\nvalue = [0, 14]\nclass = benign", fillcolor="#399de5"] ;
+9 -> 11 ;
+12 [label="mean texture <= 15.425\ngini = 0.129\nsamples = 173\nvalue = [161, 12]\nclass = malignant", fillcolor="#e78a48"] ;
+8 -> 12 ;
+13 [label="gini = 0.497\nsamples = 13\nvalue = [6, 7]\nclass = benign", fillcolor="#e3f1fb"] ;
+12 -> 13 ;
+14 [label="gini = 0.061\nsamples = 160\nvalue = [155, 5]\nclass = malignant", fillcolor="#e6853f"] ;
+12 -> 14 ;
+}

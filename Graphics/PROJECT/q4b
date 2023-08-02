@@ -1,0 +1,43 @@
+// not including includes here as pseudocode
+
+// asks the kernel to allocate resources for a socket
+// AF_INET is the address family of IPv4 (so the socket communicates using IPv4 addressing)
+// SOCK_DGRAM is used by UDP for connectionless datagram communication
+int socket = SOCKET(AF_INET, SOCK_DGRAM, UDP);
+// connects the socket to a server, in our case the broadcasting radio server
+BIND(socket, "station_socket", strlen("station_socket"));
+// while there is still information being broadcast from the server
+// if another error occurs, RECVFROM will return -1 not 0
+while (RECVFROM(socket, audio_stream, sizeOf(audio_stream), 0, &sock_addr, &sock_addrlen) != 0) 
+{
+    // play the received data from the server 
+    play_audio(audio_stream);
+}
+// end the connection between the server and the host application
+SHUTDOWN(socket, SHUT_RDWR);
+// closes the socket itself
+close(socket);
+return;
+
+
+// not including includes here as pseudocode
+
+// non functional template datatype for the audio data, could be an array etc
+audio audio_stream;
+// open a socket
+int socket = SOCKET(AF_INET, SOCK_DGRAM, UDP);
+// connect the socket to the host
+BIND(socket, "app_socket", strlen(app_socket));
+// while there is data in the audio stream
+While (audio_stream != NULL) 
+{
+    // send the audio to the host
+    SENDTO(socket, audio_stream, sizeOf(audio_stream), 0, socket_addr, socket_addrlen);
+    // get the most recent audio from the station
+    audio_stream = fetch_audio();
+}
+// when the stream is finally empty end the connection to the host
+SHUTDOWN(socket, buffer, sizeOf(buffer))
+// close the socket
+close(socket);
+return;

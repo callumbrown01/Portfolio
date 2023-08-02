@@ -1,0 +1,9 @@
+# initial test rakefile for single action
+
+actionset1:
+    echo starting actionset1
+    echo actionset1 complete
+
+actionset2:
+    echo starting actionset2
+    echo actionset2 complete

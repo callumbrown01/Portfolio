@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="radius_mean <= 0.274\ngini = 0.469\nsamples = 455\nvalue = [284, 171]\nclass = Benign", fillcolor="#f5cdb0"] ;
+1 [label="concavity_mean <= 0.209\ngini = 0.225\nsamples = 317\nvalue = [276, 41]\nclass = Benign", fillcolor="#e99456"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="concavity_mean <= -0.182\ngini = 0.09\nsamples = 274\nvalue = [261, 13]\nclass = Benign", fillcolor="#e68743"] ;
+1 -> 2 ;
+3 [label="gini = 0.042\nsamples = 233\nvalue = [228, 5]\nclass = Benign", fillcolor="#e6843d"] ;
+2 -> 3 ;
+4 [label="gini = 0.314\nsamples = 41\nvalue = [33, 8]\nclass = Benign", fillcolor="#eba069"] ;
+2 -> 4 ;
+5 [label="smoothness_mean <= -0.154\ngini = 0.454\nsamples = 43\nvalue = [15, 28]\nclass = Malignant", fillcolor="#a3d2f3"] ;
+1 -> 5 ;
+6 [label="gini = 0.0\nsamples = 8\nvalue = [8, 0]\nclass = Benign", fillcolor="#e58139"] ;
+5 -> 6 ;
+7 [label="gini = 0.32\nsamples = 35\nvalue = [7, 28]\nclass = Malignant", fillcolor="#6ab6ec"] ;
+5 -> 7 ;
+8 [label="texture_mean <= -0.651\ngini = 0.109\nsamples = 138\nvalue = [8, 130]\nclass = Malignant", fillcolor="#45a3e7"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="concavity_mean <= 0.413\ngini = 0.492\nsamples = 16\nvalue = [7, 9]\nclass = Malignant", fillcolor="#d3e9f9"] ;
+8 -> 9 ;
+10 [label="gini = 0.219\nsamples = 8\nvalue = [7, 1]\nclass = Benign", fillcolor="#e99355"] ;
+9 -> 10 ;
+11 [label="gini = 0.0\nsamples = 8\nvalue = [0, 8]\nclass = Malignant", fillcolor="#399de5"] ;
+9 -> 11 ;
+12 [label="smoothness_mean <= -1.224\ngini = 0.016\nsamples = 122\nvalue = [1, 121]\nclass = Malignant", fillcolor="#3b9ee5"] ;
+8 -> 12 ;
+13 [label="gini = 0.375\nsamples = 4\nvalue = [1, 3]\nclass = Malignant", fillcolor="#7bbeee"] ;
+12 -> 13 ;
+14 [label="gini = 0.0\nsamples = 118\nvalue = [0, 118]\nclass = Malignant", fillcolor="#399de5"] ;
+12 -> 14 ;
+}

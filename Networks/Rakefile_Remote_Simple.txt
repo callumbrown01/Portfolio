@@ -1,0 +1,6 @@
+PORT  = 4000
+HOSTS = localhost
+
+actionset1:
+    echo local echo
+    remote-echo remote echo

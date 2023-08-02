@@ -1,0 +1,29 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="worst concave points <= 0.324\ngini = 0.463\nsamples = 483\nvalue = [176, 307]\nclass = benign", fillcolor="#abd5f4"] ;
+1 [label="mean radius <= 0.255\ngini = 0.131\nsamples = 312\nvalue = [22, 290]\nclass = benign", fillcolor="#48a4e7"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="worst concave points <= -0.052\ngini = 0.034\nsamples = 287\nvalue = [5, 282]\nclass = benign", fillcolor="#3d9fe5"] ;
+1 -> 2 ;
+3 [label="gini = 0.008\nsamples = 262\nvalue = [1, 261]\nclass = benign", fillcolor="#3a9de5"] ;
+2 -> 3 ;
+4 [label="gini = 0.269\nsamples = 25\nvalue = [4, 21]\nclass = benign", fillcolor="#5fb0ea"] ;
+2 -> 4 ;
+5 [label="mean texture <= -0.525\ngini = 0.435\nsamples = 25\nvalue = [17, 8]\nclass = malignant", fillcolor="#f1bc96"] ;
+1 -> 5 ;
+6 [label="gini = 0.0\nsamples = 5\nvalue = [0, 5]\nclass = benign", fillcolor="#399de5"] ;
+5 -> 6 ;
+7 [label="gini = 0.255\nsamples = 20\nvalue = [17, 3]\nclass = malignant", fillcolor="#ea975c"] ;
+5 -> 7 ;
+8 [label="mean concavity <= -0.205\ngini = 0.179\nsamples = 171\nvalue = [154, 17]\nclass = malignant", fillcolor="#e88f4f"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="gini = 0.0\nsamples = 4\nvalue = [0, 4]\nclass = benign", fillcolor="#399de5"] ;
+8 -> 9 ;
+10 [label="concavity error <= 3.263\ngini = 0.144\nsamples = 167\nvalue = [154, 13]\nclass = malignant", fillcolor="#e78c4a"] ;
+8 -> 10 ;
+11 [label="gini = 0.104\nsamples = 163\nvalue = [154, 9]\nclass = malignant", fillcolor="#e78845"] ;
+10 -> 11 ;
+12 [label="gini = 0.0\nsamples = 4\nvalue = [0, 4]\nclass = benign", fillcolor="#399de5"] ;
+10 -> 12 ;
+}

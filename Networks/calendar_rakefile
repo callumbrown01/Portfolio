@@ -1,0 +1,7 @@
+# A typical Rakefile
+
+PORT  = 4000
+HOSTS = localhost
+
+printcalendar:
+    cal

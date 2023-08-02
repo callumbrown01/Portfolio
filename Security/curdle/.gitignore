@@ -1,0 +1,9 @@
+##########################
+## DO NOT SUBMIT THIS FILE
+##########################
+.*.swp
+makeheaders*
+lib*.a
+*.o
+typescript
+core

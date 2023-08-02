@@ -1,0 +1,11 @@
+# initial test rakefile for single action 
+
+PORT = 4000
+
+HOSTS = localhost localhost:4001
+
+actionset1:
+    echo starting actionset1
+    remote-cc -c rake-c.c
+        requires rake-c.c globals.h
+    echo actionset1 complete

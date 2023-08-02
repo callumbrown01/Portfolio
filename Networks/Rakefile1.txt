@@ -1,0 +1,7 @@
+# initial test rakefile for single action 
+
+actionset1:
+    echo starting actionset1
+        requires friends.c 
+    echo actionset1 complete
+        requires helpme.h imdying.c ofcovid.obj
